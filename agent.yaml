@@ -6,9 +6,9 @@ author: "GitAgent Hackathon"
 license: MIT
 
 model:
-  preferred: "anthropic:claude-sonnet-4-5-20250929"
+  preferred: "claude-sonnet-4-5-20250929"
   fallback:
-    - "openai:gpt-4o"
+    - "gpt-4o"
   constraints:
     temperature: 0.2
     max_tokens: 8192

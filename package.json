@@ -1,0 +1,13 @@
+{
+  "name": "paper-tracker",
+  "version": "2.0.0",
+  "description": "Git-native AI research agent — browses arXiv, tracks citations, monitors rivals, finds connections",
+  "type": "module",
+  "scripts": {
+    "demo": "node demo.js",
+    "start": "node demo.js"
+  },
+  "dependencies": {
+    "gitclaw": "latest"
+  }
+}
