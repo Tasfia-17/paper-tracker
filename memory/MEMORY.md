@@ -1,7 +1,7 @@
 # Researcher Profile
 
 ## Research Areas
-- Machine learning: specifically transformer architectures, attention mechanisms
+- Machine learning: transformer architectures, attention mechanisms
 - Efficient inference: quantization, pruning, speculative decoding
 - Multimodal models: vision-language models, cross-modal alignment
 
@@ -16,13 +16,19 @@
 - emergent capabilities, scaling laws, small language model
 - quantization, pruning, model compression
 
+## My Papers
+<!-- Add your own papers here for citation tracking -->
+<!-- Format: - {title} | semanticscholar:{ID} or arxiv:{ID} -->
+- Example Paper on KV Cache | arxiv:2401.00000
+
 ## Conferences / Venues of Interest
 - NeurIPS, ICML, ICLR, ACL, EMNLP, CVPR, ECCV
 
-## Papers Already Read (do not resurface)
-<!-- paper-tracker appends arXiv IDs here after processing -->
-
 ## Stats
 - Total papers tracked: 0
+- Total citations received: 0
 - Last updated: never
 - Digest streak: 0 weeks
+
+## Trend History
+<!-- paper-tracker appends weekly one-line trend summaries here -->

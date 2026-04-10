@@ -1,80 +1,111 @@
 # 📚 Paper Tracker
 
-> A git-native AI agent that browses arXiv daily, finds papers relevant to your research, and keeps your knowledge base permanently up to date.
+> A git-native AI research agent. Browses arXiv daily, tracks citations, monitors rivals, detects field trends, finds connections between papers, and manages your reading queue — all committed to git.
 
 ## What it does
 
-Every day at 8am, paper-tracker:
-1. Browses arXiv listing pages for your research areas
-2. Reads every abstract and scores relevance against your profile
-3. Writes structured digest entries connecting each paper to your specific work
-4. Commits everything to git — your knowledge base grows permanently
-5. Generates a scannable weekly report with must-reads highlighted
+**Daily (8am):**
+- Browses arXiv `cs.LG`, `cs.CL`, `cs.CV` for new papers
+- Scores each paper 1–5 against your research profile
+- Checks if tracked rivals/labs published anything new
+- Finds hidden connections between new papers and your existing knowledge base
+- Checks Semantic Scholar for new citations of your own papers
+- Commits everything to git with a timestamped message
+
+**Weekly (Monday 9am):**
+- Detects surging topics and field convergence trends
+- Generates a scannable digest: 🔥 must-reads, ⭐ highly relevant, 📌 worth knowing
+- Reports your reading velocity and queue depth
+
+**On demand:**
+- "What should I read next?" — prioritized recommendation based on your current focus
+- "Mark 2501.12345 as read" — moves paper through the queue, prompts for takeaway
+- "Show reading stats" — velocity, queue depth, time-to-clear estimate
+- "Find connections for 2501.12345" — manual connection search
 
 ## Setup
 
 ```bash
-# 1. Install gitclaw
 npm install -g gitclaw
 
-# 2. Edit your research profile
-nano memory/MEMORY.md   # add your research areas, keywords, open problems
+# 1. Edit your research profile
+nano memory/MEMORY.md        # research areas, keywords, open problems, your papers
 
-# 3. Run it now
-gitclaw --dir . "Run the full paper tracking pipeline for today"
+# 2. Add rivals to track
+nano memory/rivals.md        # authors and labs to monitor
 
-# 4. Schedule it (runs daily at 8am automatically)
+# 3. Run now
+gitclaw --dir . "Run the full daily paper tracking pipeline"
+
+# 4. Start the scheduler (runs automatically every day)
 gitclaw schedule start
 ```
 
-## Customize your profile
+## Features
 
-Edit `memory/MEMORY.md` to set:
-- Your research areas and keywords
-- Your current open problems (papers addressing these get score 5)
-- arXiv categories to monitor
-
-## Output
-
-- `knowledge/papers.md` — permanent, growing knowledge base of all tracked papers
-- `reports/YYYY-MM-DD.md` — weekly digest reports
-- `memory/seen-papers.md` — deduplication log
-- `git log` — full history of every paper ever added
+| Feature | What it does |
+|---|---|
+| **arXiv Browse** | Scans cs.LG/CL/CV daily, scores papers 1–5 against your profile |
+| **Paper Digest** | Structured entry per paper: what it does, why it matters to YOUR work, key insight |
+| **Citation Alert** | Monitors Semantic Scholar — alerts when someone cites your papers |
+| **Trend Radar** | Detects surging topics, field convergence, new entrants to your area |
+| **Reading Queue** | Prioritized unread/reading/read pipeline with velocity tracking |
+| **Rival Tracker** | Monitors specific authors/labs — alerts the moment they publish |
+| **Connection Finder** | Finds non-obvious links between new papers and your knowledge base |
+| **Weekly Report** | Scannable digest with must-reads highlighted |
 
 ## File structure
 
 ```
 paper-tracker/
-├── agent.yaml              # Agent manifest
-├── SOUL.md                 # Agent identity
-├── RULES.md                # Behavioral constraints
+├── agent.yaml
+├── SOUL.md
+├── RULES.md
 ├── memory/
-│   ├── MEMORY.md           # Your research profile (edit this)
-│   └── seen-papers.md      # Deduplication log (auto-managed)
+│   ├── MEMORY.md           # ← Edit this: your research profile
+│   ├── rivals.md           # ← Edit this: authors/labs to monitor
+│   ├── seen-papers.md      # deduplication log
+│   ├── citation-log.md     # citation alerts history
+│   ├── rival-log.md        # rival publication history
+│   └── known-authors.md    # author tracking for trend detection
 ├── knowledge/
-│   ├── papers.md           # Your growing knowledge base
-│   └── pdfs/               # Downloaded PDFs (optional)
-├── reports/                # Weekly digest reports
+│   ├── papers.md           # growing knowledge base (all tracked papers)
+│   ├── connections.md      # discovered paper connections
+│   └── pdfs/               # downloaded PDFs
+├── queue/
+│   ├── unread.md           # prioritized reading queue
+│   ├── reading.md          # currently reading (max 3)
+│   ├── read.md             # completed + your takeaways
+│   └── skipped.md          # consciously skipped
+├── reports/                # weekly digest reports
 ├── schedules/
-│   └── daily-arxiv-scan.yaml  # Runs every day at 8am
+│   ├── daily-arxiv-scan.yaml   # runs every day at 8am
+│   └── weekly-digest.yaml      # runs every Monday at 9am
 ├── skills/
-│   ├── arxiv-browse/       # Browses arXiv, scores relevance
-│   ├── paper-digest/       # Creates structured entries
-│   ├── knowledge-update/   # Persists to git
-│   └── weekly-report/      # Generates digest
+│   ├── arxiv-browse/
+│   ├── paper-digest/
+│   ├── citation-alert/
+│   ├── trend-radar/
+│   ├── reading-queue/
+│   ├── rival-tracker/
+│   ├── connection-finder/
+│   ├── knowledge-update/
+│   └── weekly-report/
 └── tools/
-    ├── fetch-page.yaml     # Fetches web pages
-    └── download-pdf.yaml   # Downloads PDFs
+    ├── fetch-page.yaml
+    └── download-pdf.yaml
 ```
 
 ## The git angle
 
-Every paper added is a git commit. Your entire research history is version-controlled:
+Every paper, every citation alert, every connection found — committed to git:
 
 ```bash
-git log --oneline          # see every week's harvest
-git diff HEAD~7            # what was added this week
-git log --grep="score:5"   # find all must-read papers ever
+git log --oneline              # every day's harvest
+git diff HEAD~7                # what was added this week
+git log --grep="RIVAL ALERT"   # all rival publications ever
+git log --grep="NEW CITATION"  # every time someone cited you
+git log --grep="score:5"       # all must-read papers ever found
 ```
 
-Your knowledge base is not a database. It's a git repo. Fork it, branch it, share it.
+Your research history is version-controlled. Fork it. Share it with your lab. Branch it for a new project.

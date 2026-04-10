@@ -1,5 +1,14 @@
 id: daily-arxiv-scan
-prompt: "Run the full paper tracking pipeline: use arxiv-browse to find new relevant papers, paper-digest to create structured entries, knowledge-update to persist them to git, and weekly-report to generate the digest. Today's date is today."
+prompt: >
+  Run the full daily paper tracking pipeline in this order:
+  1. arxiv-browse: find new relevant papers from arXiv
+  2. rival-tracker: check if any tracked authors/labs published new work
+  3. paper-digest: create structured digest entries for all found papers
+  4. connection-finder: find connections between new papers and the existing knowledge base
+  5. reading-queue: auto-add score-5 papers and rival papers to the top of queue/unread.md
+  6. knowledge-update: persist everything to git with a timestamped commit
+  7. citation-alert: check Semantic Scholar for new citations of my papers
+  Print a final summary of everything found today.
 cron: "0 8 * * *"
 mode: repeat
 enabled: true

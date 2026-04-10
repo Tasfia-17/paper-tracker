@@ -1,7 +1,7 @@
 spec_version: "0.1.0"
 name: paper-tracker
-version: 1.0.0
-description: "Autonomous research agent that browses arXiv daily, finds papers relevant to your research profile, and keeps your knowledge base current."
+version: 2.0.0
+description: "Autonomous research agent that browses arXiv daily, tracks citations, monitors rivals, detects field trends, and keeps your knowledge base permanently current."
 author: "GitAgent Hackathon"
 license: MIT
 
@@ -18,17 +18,24 @@ skills:
   - paper-digest
   - knowledge-update
   - weekly-report
+  - citation-alert
+  - trend-radar
+  - reading-queue
+  - rival-tracker
+  - connection-finder
 
 tools:
   - fetch-page
   - download-pdf
 
 runtime:
-  max_turns: 80
-  timeout: 600
+  max_turns: 120
+  timeout: 900
 
 tags:
   - research
   - arxiv
   - literature-review
   - academia
+  - citation-tracking
+  - trend-analysis

@@ -1,0 +1,11 @@
+id: weekly-digest
+prompt: >
+  Generate the full weekly research digest:
+  1. trend-radar: analyze the last 30 days of papers for emerging trends, surging topics, and field convergence
+  2. weekly-report: generate the full weekly digest report with must-reads, highly relevant, and worth-knowing sections
+  3. reading-queue: print reading stats — how many papers read this week, queue depth, velocity
+  Save the report to reports/YYYY-MM-DD.md and print it to stdout.
+cron: "0 9 * * 1"
+mode: repeat
+enabled: true
+createdAt: "2026-04-10T00:00:00Z"
