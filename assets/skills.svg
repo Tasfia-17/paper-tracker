@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340">
+  <defs>
+    <filter id="s">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="780" height="340" rx="16" fill="#f8f4ff"/>
+
+  <!-- row 1 -->
+  <!-- card 1 -->
+  <rect x="16" y="16" width="228" height="90" rx="12" fill="#667eea" filter="url(#s)"/>
+  <text x="130" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">arxiv-browse</text>
+  <text x="130" y="66" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#e9d8fd">Scans cs.LG, cs.CL, cs.CV daily</text>
+  <text x="130" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#e9d8fd">scores every paper 1-5</text>
+
+  <!-- card 2 -->
+  <rect x="260" y="16" width="228" height="90" rx="12" fill="#9f7aea" filter="url(#s)"/>
+  <text x="374" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">paper-digest</text>
+  <text x="374" y="66" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#e9d8fd">Structured entry per paper</text>
+  <text x="374" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#e9d8fd">linked to your open problems</text>
+
+  <!-- card 3 -->
+  <rect x="504" y="16" width="260" height="90" rx="12" fill="#4facfe" filter="url(#s)"/>
+  <text x="634" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">citation-alert</text>
+  <text x="634" y="66" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#ebf8ff">Monitors Semantic Scholar</text>
+  <text x="634" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#ebf8ff">alerts when your papers are cited</text>
+
+  <!-- row 2 -->
+  <!-- card 4 -->
+  <rect x="16" y="124" width="228" height="90" rx="12" fill="#48bb78" filter="url(#s)"/>
+  <text x="130" y="156" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">trend-radar</text>
+  <text x="130" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#f0fff4">Detects surging topics</text>
+  <text x="130" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#f0fff4">and field convergence</text>
+
+  <!-- card 5 -->
+  <rect x="260" y="124" width="228" height="90" rx="12" fill="#f6ad55" filter="url(#s)"/>
+  <text x="374" y="156" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">reading-queue</text>
+  <text x="374" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fffaf0">Prioritized unread pipeline</text>
+  <text x="374" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fffaf0">tracks reading velocity</text>
+
+  <!-- card 6 -->
+  <rect x="504" y="124" width="260" height="90" rx="12" fill="#f093fb" filter="url(#s)"/>
+  <text x="634" y="156" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">rival-tracker</text>
+  <text x="634" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fff5f5">Monitors specific authors and labs</text>
+  <text x="634" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fff5f5">alerts on new publications</text>
+
+  <!-- row 3 -->
+  <!-- card 7 -->
+  <rect x="16" y="232" width="228" height="90" rx="12" fill="#fc8181" filter="url(#s)"/>
+  <text x="130" y="264" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#fff">connection-finder</text>
+  <text x="130" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fff5f5">Finds hidden links between</text>
+  <text x="130" y="298" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fff5f5">new and existing papers</text>
+
+  <!-- card 8 -->
+  <rect x="260" y="232" width="228" height="90" rx="12" fill="#76e4f7" filter="url(#s)"/>
+  <text x="374" y="264" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#1a365d">knowledge-update</text>
+  <text x="374" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1a365d">Persists everything to git</text>
+  <text x="374" y="298" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1a365d">with timestamped commits</text>
+
+  <!-- card 9 -->
+  <rect x="504" y="232" width="260" height="90" rx="12" fill="#68d391" filter="url(#s)"/>
+  <text x="634" y="264" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#1a4731">weekly-report</text>
+  <text x="634" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1a4731">Scannable Monday digest</text>
+  <text x="634" y="298" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1a4731">must-reads highlighted</text>
+</svg>

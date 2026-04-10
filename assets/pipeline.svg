@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8f4ff"/>
+      <stop offset="100%" style="stop-color:#f0f7ff"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#667eea" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="180" rx="16" fill="url(#bg)"/>
+
+  <!-- step 1 -->
+  <rect x="20" y="40" width="120" height="100" rx="12" fill="#fff" filter="url(#shadow)"/>
+  <rect x="20" y="40" width="120" height="6" rx="12" fill="#667eea"/>
+  <text x="80" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#3c366b">arXiv</text>
+  <text x="80" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">cs.LG / cs.CL</text>
+  <text x="80" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">cs.CV listings</text>
+  <text x="80" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#a0aec0">live papers</text>
+
+  <!-- arrow -->
+  <line x1="142" y1="90" x2="162" y2="90" stroke="#667eea" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 2 -->
+  <rect x="165" y="40" width="120" height="100" rx="12" fill="#fff" filter="url(#shadow)"/>
+  <rect x="165" y="40" width="120" height="6" rx="12" fill="#9f7aea"/>
+  <text x="225" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#3c366b">arxiv-browse</text>
+  <text x="225" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">score 1-5 against</text>
+  <text x="225" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">your profile</text>
+  <text x="225" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#a0aec0">filter noise</text>
+
+  <!-- arrow -->
+  <line x1="287" y1="90" x2="307" y2="90" stroke="#667eea" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 3 -->
+  <rect x="310" y="40" width="120" height="100" rx="12" fill="#fff" filter="url(#shadow)"/>
+  <rect x="310" y="40" width="120" height="6" rx="12" fill="#f093fb"/>
+  <text x="370" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#3c366b">paper-digest</text>
+  <text x="370" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">structured entry</text>
+  <text x="370" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">linked to your work</text>
+  <text x="370" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#a0aec0">why it matters</text>
+
+  <!-- arrow -->
+  <line x1="432" y1="90" x2="452" y2="90" stroke="#667eea" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 4 -->
+  <rect x="455" y="40" width="120" height="100" rx="12" fill="#fff" filter="url(#shadow)"/>
+  <rect x="455" y="40" width="120" height="6" rx="12" fill="#48bb78"/>
+  <text x="515" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#3c366b">knowledge-update</text>
+  <text x="515" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">append to</text>
+  <text x="515" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">knowledge/papers.md</text>
+  <text x="515" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#a0aec0">git commit</text>
+
+  <!-- arrow -->
+  <line x1="577" y1="90" x2="597" y2="90" stroke="#667eea" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 5 -->
+  <rect x="600" y="40" width="180" height="100" rx="12" fill="#fff" filter="url(#shadow)"/>
+  <rect x="600" y="40" width="180" height="6" rx="12" fill="#f6ad55"/>
+  <text x="690" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#3c366b">weekly-report</text>
+  <text x="690" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">must-reads / relevant</text>
+  <text x="690" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#718096">worth-knowing digest</text>
+  <text x="690" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#a0aec0">every Monday</text>
+
+  <!-- cron label -->
+  <text x="400" y="165" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#a0aec0">runs automatically every day at 8am via cron schedule</text>
+</svg>
