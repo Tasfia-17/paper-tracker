@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+knowledge/pdfs/
+memory/citation-state.json
+memory/rival-state.json
