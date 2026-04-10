@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300">
+  <defs>
+    <filter id="s">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9f7aea"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#48bb78"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="300" rx="16" fill="#faf5ff"/>
+
+  <!-- knowledge base (left) -->
+  <rect x="20" y="80" width="160" height="140" rx="12" fill="#667eea" filter="url(#s)"/>
+  <text x="100" y="110" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">knowledge base</text>
+  <rect x="36" y="120" width="128" height="1" fill="#fff" opacity="0.3"/>
+  <text x="100" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">knowledge/papers.md</text>
+  <text x="100" y="153" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">knowledge/connections.md</text>
+  <text x="100" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">memory/MEMORY.md</text>
+  <text x="100" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">memory/rivals.md</text>
+  <text x="100" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#c4b5fd">flat markdown files</text>
+
+  <!-- arrow to wiki-build -->
+  <line x1="182" y1="150" x2="248" y2="150" stroke="#9f7aea" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="215" y="143" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#9f7aea">wiki absorb</text>
+
+  <!-- wiki-build skill (center) -->
+  <rect x="250" y="100" width="140" height="100" rx="12" fill="#9f7aea" filter="url(#s)"/>
+  <text x="320" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">wiki-build</text>
+  <text x="320" y="148" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">extracts entities</text>
+  <text x="320" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">creates articles</text>
+  <text x="320" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#e9d8fd">builds wikilinks</text>
+
+  <!-- arrow to wiki -->
+  <line x1="392" y1="150" x2="448" y2="150" stroke="#9f7aea" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- wiki (right) -->
+  <rect x="450" y="20" width="290" height="260" rx="12" fill="#fff" filter="url(#s)" stroke="#e9d8fd" stroke-width="1.5"/>
+  <rect x="450" y="20" width="290" height="36" rx="12" fill="#9f7aea"/>
+  <rect x="450" y="44" width="290" height="12" fill="#9f7aea"/>
+  <text x="595" y="44" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#fff">wiki/</text>
+
+  <text x="470" y="80" font-family="monospace" font-size="10" fill="#553c9a">_index.md</text>
+  <text x="470" y="96" font-family="monospace" font-size="10" fill="#553c9a">_backlinks.json</text>
+
+  <rect x="466" y="106" width="258" height="1" fill="#e9d8fd"/>
+
+  <text x="470" y="122" font-family="monospace" font-size="10" fill="#667eea">authors/</text>
+  <text x="490" y="137" font-family="monospace" font-size="9" fill="#a0aec0">tri-dao.md</text>
+  <text x="490" y="150" font-family="monospace" font-size="9" fill="#a0aec0">noam-shazeer.md</text>
+
+  <text x="470" y="168" font-family="monospace" font-size="10" fill="#48bb78">topics/</text>
+  <text x="490" y="183" font-family="monospace" font-size="9" fill="#a0aec0">kv-cache-efficiency.md</text>
+  <text x="490" y="196" font-family="monospace" font-size="9" fill="#a0aec0">speculative-decoding.md</text>
+
+  <text x="470" y="214" font-family="monospace" font-size="10" fill="#f6ad55">methods/</text>
+  <text x="490" y="229" font-family="monospace" font-size="9" fill="#a0aec0">flash-attention.md</text>
+
+  <text x="470" y="247" font-family="monospace" font-size="10" fill="#fc8181">papers/</text>
+  <text x="490" y="262" font-family="monospace" font-size="9" fill="#a0aec0">2501-12345.md</text>
+
+  <!-- query arrow -->
+  <path d="M 595 280 Q 595 295 400 295 Q 205 295 205 230" stroke="#48bb78" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
+  <text x="400" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#48bb78">wiki query -- agent navigates like Wikipedia</text>
+</svg>

@@ -1,0 +1,10 @@
+id: weekly-wiki-absorb
+prompt: >
+  Run wiki absorb: process all new papers from knowledge/papers.md and connections from
+  knowledge/connections.md into the research wiki. Create or update author articles,
+  topic articles, method articles, and paper articles with proper wikilinks.
+  Rebuild wiki/_index.md and wiki/_backlinks.json. Commit the updated wiki to git.
+cron: "0 10 * * 1"
+mode: repeat
+enabled: true
+createdAt: "2026-04-10T00:00:00Z"

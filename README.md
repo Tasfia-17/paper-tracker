@@ -46,7 +46,50 @@ The agent runs on a cron schedule. Each day it fetches live arXiv listings, scor
 | `rival-tracker` | Monitors specific authors and labs on arXiv. Alerts the moment they publish new work. |
 | `connection-finder` | Finds non-obvious links between new papers and your existing knowledge base. Flags contradictions and direct extensions. |
 | `knowledge-update` | Appends all new papers to `knowledge/papers.md` and commits to git with a timestamped message. |
-| `weekly-report` | Generates a scannable Monday digest with must-reads, highly relevant, and worth-knowing sections. |
+| `wiki-build` | Builds a personal research Wikipedia from tracked papers. Creates interlinked author, topic, method, and paper articles with `[[wikilinks]]` and a backlink index. |
+
+---
+
+## Research Wiki (Farzapedia-style)
+
+<p align="center">
+  <img src="assets/wiki-architecture.svg" alt="wiki architecture" width="760"/>
+</p>
+
+paper-tracker builds a personal research Wikipedia from everything it tracks. Inspired by the Farzapedia concept -- a personal knowledge base structured for agents to navigate, not humans to browse.
+
+Every paper absorbed becomes interlinked articles: one for each author, one for each topic, one for each method. The agent navigates this wiki like Wikipedia -- following `[[wikilinks]]` from topic to author to paper -- to answer questions from your accumulated knowledge rather than a web search.
+
+**Build the wiki from your tracked papers:**
+
+```bash
+node demo.js "wiki absorb"
+```
+
+**Query your research knowledge:**
+
+```bash
+node demo.js "wiki query: what do I know about speculative decoding and who are the key authors?"
+node demo.js "wiki query: which methods address my KV cache open problem?"
+node demo.js "wiki query: what have rival labs published on attention efficiency?"
+node demo.js "wiki status"
+```
+
+**Wiki structure:**
+
+```
+wiki/
+  _index.md              # master index with aliases
+  _backlinks.json        # reverse link index
+  authors/               # one article per tracked author
+  topics/                # research topic articles
+  methods/               # technique and method articles
+  papers/                # full articles for score-5 papers
+  connections/           # cross-cutting insight articles
+  rivals/                # lab and group articles
+```
+
+The wiki is committed to git after every absorb. `git log wiki/` shows the history of your understanding growing over time. Fork the repo to share your research knowledge base with your lab.
 
 ---
 
