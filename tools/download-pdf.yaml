@@ -1,6 +1,7 @@
 name: download-pdf
 description: "Download a paper PDF from arXiv and save it locally to knowledge/pdfs/. Returns the local file path."
 input_schema:
+  type: object
   properties:
     arxiv_id:
       type: string
@@ -10,5 +11,5 @@ input_schema:
       description: "Short slug for the filename (e.g. kv-cache-compression)"
   required: [arxiv_id]
 implementation:
-  script: download-pdf.sh
-  runtime: sh
+  type: script
+  path: tools/scripts/download-pdf.sh

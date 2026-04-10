@@ -1,6 +1,7 @@
 name: fetch-page
 description: "Fetch the HTML content of a URL and return the readable text. Used to browse arXiv listing and abstract pages."
 input_schema:
+  type: object
   properties:
     url:
       type: string
@@ -12,5 +13,5 @@ input_schema:
       default: text
   required: [url]
 implementation:
-  script: fetch-page.sh
-  runtime: sh
+  type: script
+  path: tools/scripts/fetch-page.sh
