@@ -1,0 +1,34 @@
+spec_version: "0.1.0"
+name: paper-tracker
+version: 1.0.0
+description: "Autonomous research agent that browses arXiv daily, finds papers relevant to your research profile, and keeps your knowledge base current."
+author: "GitAgent Hackathon"
+license: MIT
+
+model:
+  preferred: "anthropic:claude-sonnet-4-5-20250929"
+  fallback:
+    - "openai:gpt-4o"
+  constraints:
+    temperature: 0.2
+    max_tokens: 8192
+
+skills:
+  - arxiv-browse
+  - paper-digest
+  - knowledge-update
+  - weekly-report
+
+tools:
+  - fetch-page
+  - download-pdf
+
+runtime:
+  max_turns: 80
+  timeout: 600
+
+tags:
+  - research
+  - arxiv
+  - literature-review
+  - academia

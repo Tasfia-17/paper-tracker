@@ -1,0 +1,6 @@
+id: daily-arxiv-scan
+prompt: "Run the full paper tracking pipeline: use arxiv-browse to find new relevant papers, paper-digest to create structured entries, knowledge-update to persist them to git, and weekly-report to generate the digest. Today's date is today."
+cron: "0 8 * * *"
+mode: repeat
+enabled: true
+createdAt: "2026-04-10T00:00:00Z"
